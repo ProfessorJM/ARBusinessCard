@@ -18,15 +18,16 @@
       <a-entity
         mindar-image-target="targetIndex: 0"
       >
-        <a-circle
-                  src="#platform"
+        <a-entity
+                  geometry="primitive: circle"
+                  material="shader: flat; src: #platform"
                   opaciy="0.5"
                   position="0 0 0"
                   radius="0.1596875"
                   rotation="0 0 0"
                   animation="property: rotation; to: 0 360 0; loop: false; dur: 5000"
                   >
-        </a-circle>
+        </a-entity>
         <a-plane
                  color="blue"
                  opaciy="0.5"
