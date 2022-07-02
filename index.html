@@ -8,7 +8,8 @@
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
       <a-assets>
-        <img id="platform" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg">
+        <img id="platformFront" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg">
+        <img id="platformBack" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg">
       </a-assets>
       <a-camera
         position="0 0 0"
@@ -20,7 +21,7 @@
       >
         <a-entity animation="property: rotation; to: 0 360 0; loop: true; dur: 2500">
                       <a-circle
-                        material="src: #platform"
+                        material="src: #platformBack"
                         opaciy="0.5"
                         position="0 0 0"
                         radius="0.1596875"
@@ -28,7 +29,7 @@
                         >
                       </a-circle>
                       <a-circle
-                        material="src: #platform"
+                        material="src: #platformFront"
                         opaciy="0.5"
                         position="0 0 0"
                         radius="0.1596875"
