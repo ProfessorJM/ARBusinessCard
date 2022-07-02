@@ -7,9 +7,12 @@
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: ./targets.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-assets>
+        <img id="platform" src="https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg">
+      </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane color="blue" opaciy="0.5" position="1.019 0 0" height="0.636875" width="1" rotation="0 0 0"></a-plane>
+        <a-plane src="#platform" opaciy="0.5" position="1.019 0 0" height="0.636875" width="1" rotation="0 0 0"></a-plane>
         <a-plane color="blue" opaciy="0.5" position="-1.019 0 0" height="0.636875" width="1" rotation="0 0 0"></a-plane>
         <a-plane color="blue" opaciy="0.5" position="0 -1.190 0" height="0.636875" width="1" rotation="0 0 0"></a-plane>
       </a-entity>
