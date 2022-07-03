@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8" />
   <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
@@ -18,7 +18,7 @@
     <a-entity mindar-image-target="targetIndex: 0">
       <a-plane position="0 0 0" height="0.5416" width="1" color="blue" visible="false" Animation__visible="property: visible; to: true; easing: linear; loop: false" Animation__position="property: position; to: 0 -0.5916 0; dur: 2000; easing: linear; loop: false"></a-plane>
       <a-circle src="#photo" radius="0.27083" position="0 0 0" visible="false" Animation__visible="property: visible; to: true; easing: linear; loop: false; delay:2000" Animation__position="property: position; to: 0.8 0 0; dur: 2000; easing: linear; loop: false; delay:2000"></a-circle>
-      <a-text position="1.4 0 0" text="Дмитрий"  font="aileronsemibold"></a-text>
+      <a-text position="1.4 0 0" value="Дмитрий" font="./Font/russianLanguage-msdf.json" font-image="./Font/russianLanguage-msdf.png"></a-text>
     </a-entity>
   </a-scene>
 </body>
