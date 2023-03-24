@@ -1,26 +1,15 @@
+<!DOCTYPE html>
 <html>
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image.prod.js"></script>
-  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-image-aframe.prod.js"></script>
+<title>AR.js A-Frame Location-based</title>
+<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
+<script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
 </head>
-
 <body>
-  <a-scene mindar-image="imageTargetSrc: ./ImageTracker/targets.mind;" vr-mode-ui="enabled: false"
-    device-orientation-permission-ui="enabled: false">
-    <a-assets>
-      <img id="photo" src="./Assets/Photo.jpg">
-    </a-assets>
-    <a-camera position="0 0 0" look-controls="enabled: false">
-    </a-camera>
-    <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane position="0 0 0" height="0.5416" width="1" color="blue" visible="false" Animation__visible="property: visible; to: true; easing: linear; loop: false" Animation__position="property: position; to: 0 -0.5916 0; dur: 2000; easing: linear; loop: false"></a-plane>
-      <a-circle src="#photo" radius="0.27083" position="0 0 0" visible="false" Animation__visible="property: visible; to: true; easing: linear; loop: false; delay:2000" Animation__position="property: position; to: 0.8 0 0; dur: 2000; easing: linear; loop: false; delay:2000"></a-circle>
-      <a-entity position="1.4 0 0" text="value: Дмитрий\nДенисов; color: #33C3F0; negate: false; font: 20810-msdf.json; shader: msdf;"></a-entity>
-    </a-entity>
-  </a-scene>
+<a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+    <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+    <a-entity material='color: red' geometry='primitive: box' gps-new-entity-place="latitude: <your-lat>; longitude: <your-loon>" scale="10 10 10"></a-entity>
+</a-scene>
 </body>
-
 </html>
