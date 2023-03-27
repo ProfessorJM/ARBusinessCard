@@ -5,11 +5,13 @@
 <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js'></script>
 <script type='text/javascript' src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js'></script>
+<script src='aframe-portal-door.js'></script>
+<script src='threex-portal-door.js'></script>
 </head>
 <body>
 <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
     <a-camera id='camera1' look-controls-enabled='false' arjs-device-orientation-controls='smoothingFactor: 0.1' gps-new-camera='gpsMinDistance: 5'> </a-camera>
-    <a-entity obj-model="obj:Assets/Wolf_obj.obj; mtl:Assets/Wolf_obj.mtl" gps-new-entity-place="latitude: 56.82484306939431; longitude: 60.67253897006401" scale="5 5 5"></a-entity>
+    <a-portal-door gps-entity-place="latitude: 56.826645; longitude: 60.612556;" url='https://cdn.aframe.io/360-image-gallery-boilerplate/img/city.jpg' position='0 0 0' scale='0.7 1 0.7' rotation='0 90 0'><a-portal-door>
     
 </a-scene>
 </body>
