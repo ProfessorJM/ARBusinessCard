@@ -9,8 +9,8 @@
 <body>
         <script>
             AFRAME.registerComponent("locationfinder", {
-                init: function () {
-                    navigator.geolocation.getCurrentPosition(function (location) {
+                init: function(){
+                    navigator.geolocation.getCurrentPosition(function(location){
                         console.log(location);
                     });
                 },
